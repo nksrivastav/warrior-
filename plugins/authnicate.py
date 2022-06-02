@@ -11,7 +11,7 @@ from modules.database.dbchat import (get_served_chats, is_served_chat, add_serve
 @errors
 @sudo_users_only
 async def auth_chat_func(_, message: Message):
-    if len(message.commandpro) != 2:
+    if len(message.command) != 2:
         return await message.reply_text(
             "**usage:**\n\n/add [chat_id]"
         )
@@ -27,7 +27,7 @@ async def auth_chat_func(_, message: Message):
 @errors
 @sudo_users_only
 async def unauth_chat_func(_, message: Message):
-    if len(message.commandpro) != 2:
+    if len(message.command) != 2:
         return await message.reply_text(
             "**usage:**\n\n/del [chat_id]"
         )
