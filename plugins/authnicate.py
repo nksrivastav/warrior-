@@ -2,12 +2,14 @@ from pyrogram import filters, Client
 from pyrogram.types import Message
 
 from modules import bot as app
-from modules.config OWNER_ID as owner
+from modules.helpers.decorators import errors, sudo_users_only
 from modules.helpers.command import commandpro
 from modules.database.dbchat import (get_served_chats, is_served_chat, add_served_chat, remove_served_chat)  
 
 
-@app.on_message(commandpro(["add"]) & filters.user(owner))
+@app.on_message(commandpro(["add"]))
+@errors
+@sudo_users_only
 async def auth_chat_func(_, message: Message):
     if len(message.commandpro) != 2:
         return await message.reply_text(
@@ -21,7 +23,9 @@ async def auth_chat_func(_, message: Message):
         await message.reply_text("✅ This Chat already added.")
 
 
-@app.on_message(commandpro(["del"]) & filters.user(owner))
+@app.on_message(commandpro(["del"]))
+@errors
+@sudo_users_only
 async def unauth_chat_func(_, message: Message):
     if len(message.commandpro) != 2:
         return await message.reply_text(
@@ -39,7 +43,9 @@ async def unauth_chat_func(_, message: Message):
       await message.reply_text(f"error: `{e}`")
 
 
-@app.on_message(filters.commandpro("allowedchat") & filters.user(owner))
+@app.on_message(filters.commandpro("allowedchat"))
+@errors
+@sudo_users_only
 async def blacklisted_chats_func(_, message: Message):
     served_chats = []
     text = "💡 **allowed chats:**\n\n"
