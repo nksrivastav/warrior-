@@ -1,0 +1,44 @@
+{
+    "name": "AdityaPlayer",
+    "logo": "https://te.legra.ph/file/2e2ddeb33674ba956148f.jpg",
+    "description": "An Advanced Premium Music Bot For Telegram Groups VC.",
+    "keywords": ["music", "voice chat", "telegram"],
+    "repository": "https://github.com/adityahalderxd/adityaplayer",
+    "stack": "container",
+    "env": {
+        "API_ID": {
+            "description": "Your App ID",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Your App Hash",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "Put Bot Token Of Your Bot",
+            "required": true
+        },
+        "DURATION_LIMIT": {
+            "description": "Maximum Duration Limit (Minutes) Of Music Player",
+            "required": true,
+            "value": "10"
+        },
+        "STRING_SESSION": {
+            "description": "Pyrogram String Session",
+            "required": true
+        },
+        "SUDO_USERS": {
+            "description": "Sudo Users Can Control Bot Without Admin Permission",
+            "required": true,
+            "value": "1282754256"
+        }
+    },
+    "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    }
+  ]
+}
