@@ -1,5 +1,5 @@
 # Aditya Halder // @AdityaHalder
-
+# 𝐊𝐚𝐚𝐥𝐌𝐮𝐬𝐢𝐜 // @𝐌𝐫𝐊𝐚𝐚𝐥𝐱𝐃
 import os
 import aiofiles
 import aiohttp
@@ -120,7 +120,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
 
 
 @Client.on_message(
-    commandpro(["/play", "/yt", "/ytp", "play", "yt", "ytp", "@", "#"])
+    commandpro(["play", "/play", "!play", ".play", "ply", "@", "#"])
     & filters.group
     & ~filters.edited
     & ~filters.forwarded
@@ -134,17 +134,17 @@ async def play(_, message: Message):
     lel = await message.reply("**🔎 Sɘɑɤƈɦɩɳʛ ...**")
 
     if not await is_served_chat(message.chat.id):
-        await lel.edit(f"❌ **This chat not authorized !**\n\nI can't stream music in non-authorized chat, ask to sudo user to auth this chat.\n\DM to the sudo user [From Here](https://t.me/adityahalder)", disable_web_page_preview=True)
+        await lel.edit(f"**🥀 𝐒𝐨𝐫𝐫𝐲 𝐓𝐡𝐢𝐬 🌺 𝐌𝐮𝐬𝐢𝐜 𝐑𝐨𝐛𝐨𝐭\n𝐎𝐧𝐥𝐲 𝐅𝐨𝐫 𝐏𝐫𝐞𝐦𝐢𝐮𝐦 𝐔𝐬𝐞𝐫𝐬 ✨...\n\n💐 𝐈𝐟 𝐘𝐨𝐮 ❥︎𝐖𝐚𝐧𝐭 🌸 𝐭𝐨 𝐀𝐝𝐝 𝐢𝐧\n𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩 𝐓𝐡𝐞𝐧 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 🌷\n❥︎ 𝐓𝐨 ➪ [𓆩❛-𝐌𝐫᭄'𝐊𝐚𝐚𝐋-𝐱𝐃 °𓆪](https://t.me/mrkaalxd) ...**", disable_web_page_preview=True)
         return await bot.leave_chat(message.chat.id)  
     if message.sender_chat:
-        return await lel.edit("You'll need to switch to a user account to play music.")  
+        return await lel.edit("**🥀 𝐏𝐥𝐞𝐚𝐬𝐞 𝐃𝐨𝐧'𝐭 𝐔𝐬𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐅𝐨𝐫 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 ✨ ...**")  
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "Aditya_Player"
+        user.first_name = "⏤͟͟͞❥͜͡𝄟⃟𝐊𝐚𝐚𝐥🕊️⃝‌ٖٖٖٖ ‌ٖٖٖٖٖ🦋𝐌𝐮𝐬𝐢𝐜𝄟⃟🎸"
     usar = user
     wew = usar.id
     try:
@@ -156,24 +156,24 @@ async def play(_, message: Message):
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "**💥 Ʌʈ🤞Fɩrsʈ 🥀 Ɱɑƙɘ ♥️ Ɱɘ ⭐ Ʌɗɱɩŋ 😎 ...**")
+                        "**💥 𝐀𝐭🤞𝐅𝐢𝐫𝐬𝐭 🥀 𝐌𝐚𝐤𝐞 ♥️ 𝐌𝐞 ⭐ 𝐀𝐝𝐦𝐢𝐧 😎 ...**")
                     return
 
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "** 😎 I🤞Ʌɱ 🥀 Ʀɘɑɗy ♥️ Ƭø ⭐ Ƥɭɑy 😎 ...**")
+                        message.chat.id, "** 😎 𝐈🤞𝐚𝐦 🥀 𝐑𝐞𝐚𝐝𝐲 ♥️ 𝐓𝐨 ⭐ 𝐏𝐥𝐚𝐲 😎 ...**")
 
                 except UserAlreadyParticipant:
                     pass
                 except Exception:
                     await lel.edit(
-                        f"**🎸 Ƥɭɘɑsɘ ❤️ Ɱɑŋʋɑɭɭy 🥀 Ʌɗɗ 💫 Ʌssɩsʈɑŋʈ 😔 Øɤ 🎸 Ƈøŋʈɑƈʈ ❤️ ʈø ː [ƛɗɩtyɑ Ɦɑɭɗɘr](https://t.me/AdityaHalder) 🥀**")
+                        f"**🎸 𝐏𝐥𝐞𝐚𝐬𝐞 ❤️ 𝐌𝐚𝐧𝐮𝐚𝐥𝐥𝐲 🥀 𝐀𝐝𝐝 💫 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 😔 𝐎𝐫 🎸 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 ❤️ 𝐓𝐨 ː [𓆩❛-𝐌𝐫᭄'𝐊𝐚𝐚𝐋-𝐱𝐃 °𓆪](https://t.me/mrkaalxd) ✨ ...**")
     try:
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"**🎸 Ƥɭɘɑsɘ ❤️ Ɱɑŋʋɑɭɭy 🥀 Ʌɗɗ 💫 Ʌssɩsʈɑŋʈ 😔 Øɤ 🎸 Ƈøŋʈɑƈʈ ❤️ ʈø ː [ƛɗɩtyɑ Ɦɑɭɗɘr](https://t.me/AdityaHalder) 🥀**")
+            f"**🎸 𝐏𝐥𝐞𝐚𝐬𝐞 ❤️ 𝐌𝐚𝐧𝐮𝐚𝐥𝐥𝐲 🥀 𝐀𝐝𝐝 💫 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 😔 𝐎𝐫 🎸 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 ❤️ 𝐓𝐨 ː [𓆩❛-𝐌𝐫᭄'𝐊𝐚𝐚𝐋-𝐱𝐃 °𓆪](https://t.me/mrkaalxd) ✨ ...**")
         return
     
     audio = (
@@ -186,7 +186,7 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"**💥 Ƥɭɑy 🔊 Ɱʋsɩƈ 💿 Lɘss ⚡️\n🤟 Ƭɦɑɳ⚡️ {DURATION_LIMIT} 💞 Ɱɩɳʋʈɘ ...**"
+                f"**💥 𝐏𝐥𝐚𝐲 🔊 𝐌𝐮𝐬𝐢𝐜 💿 𝐋𝐞𝐬𝐬 ⚡️\n🤟 𝐓𝐡𝐚𝐧⚡️ {DURATION_LIMIT} 💞 𝐌𝐢𝐧𝐮𝐭𝐞 ...**"
             )
 
         file_name = get_file_name(audio)
@@ -200,8 +200,8 @@ async def play(_, message: Message):
             [
                 [
                         InlineKeyboardButton(
-                            text="💥 ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀᴛ ɢʀᴏᴜᴘ 💞",
-                            url=f"https://t.me/adityadiscus")
+                            text="💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐭 𝐆𝐫𝐨𝐮𝐩 💞",
+                            url=f"https://t.me/sanki_world")
 
                 ]
             ]
@@ -239,8 +239,8 @@ async def play(_, message: Message):
             [
                 [
                         InlineKeyboardButton(
-                            text="💥 ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀᴛ ɢʀᴏᴜᴘ 💞",
-                            url=f"https://t.me/adityadiscus")
+                            text="💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐭 𝐆𝐫𝐨𝐮𝐩 💞",
+                            url=f"https://t.me/sanki_world")
 
                 ]
             ]
@@ -255,8 +255,8 @@ async def play(_, message: Message):
             [
                 [
                         InlineKeyboardButton(
-                            text="💥 ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀᴛ ɢʀᴏᴜᴘ 💞",
-                            url=f"https://t.me/adityadiscus")
+                            text="💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐭 𝐆𝐫𝐨𝐮𝐩 💞",
+                            url=f"https://t.me/sanki_world")
 
                 ]
             ]
@@ -264,7 +264,7 @@ async def play(_, message: Message):
 
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
-                f"**💥 Ƥɭɑy 🔊 Ɱʋsɩƈ 💿 Lɘss ⚡️\n🤟 Ƭɦɑɳ⚡️ {DURATION_LIMIT} 💞 Ɱɩɳʋʈɘ ...**"
+                f"**💥 𝐏𝐥𝐚𝐲 🔊 𝐌𝐮𝐬𝐢𝐜 💿 𝐋𝐞𝐬𝐬 ⚡️\n🤟 𝐓𝐡𝐚𝐧⚡️ {DURATION_LIMIT} 💞 𝐌𝐢𝐧𝐮𝐭𝐞 ...**"
             )
             return
         requested_by = message.from_user.first_name
@@ -273,7 +273,7 @@ async def play(_, message: Message):
     else:
         if len(message.command) < 2:
             return await lel.edit(
-                "**🤖 Ɠɩⱱɘ 🙃 Ɱʋsɩƈ 💿 Ɲɑɱɘ 😍\n💞 Ƭø 🔊 Ƥɭɑy 🌷...**"
+                "**🤖 𝐆𝐢𝐯𝐞 🙃 𝐌𝐮𝐬𝐢𝐜 💿 𝐍𝐚𝐦𝐞 😍\n💞 𝐓𝐨 🔊 𝐏𝐥𝐚𝐲 🥀 𝐒𝐨𝐧𝐠 🌷...**"
             )
         await lel.edit("**🔄 Ƥɤøƈɘssɩɳʛ ...**")
         query = message.text.split(None, 1)[1]
@@ -300,7 +300,7 @@ async def play(_, message: Message):
 
         except Exception as e:
             await lel.edit(
-                "**🔊 Ɱʋsɩƈ 😕 Ɲøʈ 📵 Føʋɳɗ❗️\n💞 Ƭɤy ♨️ Ʌɳøʈɦɘɤ 🌷...**"
+                "**🔊 𝐌𝐮𝐬𝐢𝐜 😕 𝐍𝐨𝐭 📵 𝐅𝐨𝐮𝐧𝐝❗️\n💞 𝐓𝐫𝐲 ♨️ 𝐀𝐧𝐨𝐭𝐡𝐞𝐫 🌷...**"
             )
             print(str(e))
             return
@@ -309,8 +309,8 @@ async def play(_, message: Message):
             [
                 [
                         InlineKeyboardButton(
-                            text="💥 ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀᴛ ɢʀᴏᴜᴘ 💞",
-                            url=f"https://t.me/adityadiscus")
+                            text="💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐭 𝐆𝐫𝐨𝐮𝐩 💞",
+                            url=f"https://t.me/sanki_world")
 
                 ]
             ]
@@ -318,7 +318,7 @@ async def play(_, message: Message):
 
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
-                f"**💥 Ƥɭɑy 🔊 Ɱʋsɩƈ 💿 Lɘss ⚡️\n🤟 Ƭɦɑɳ⚡️ {DURATION_LIMIT} 💞 Ɱɩɳʋʈɘ ...**"
+                f"**💥 𝐏𝐥𝐚𝐲 🔊 𝐌𝐮𝐬𝐢𝐜 💿 𝐋𝐞𝐬𝐬 ⚡️\n🤟 𝐓𝐡𝐚𝐧⚡️ {DURATION_LIMIT} 💞 𝐌𝐢𝐧𝐮𝐭𝐞 ...**"
             )
             return
         requested_by = message.from_user.first_name
@@ -332,7 +332,7 @@ async def play(_, message: Message):
         position = await queues.put(chat_id, file=file_path)
         await message.reply_photo(
             photo="final.png",
-            caption="**💥 Ʌɗɩtyɑ🤞Ʌɗɗɘɗ 💿 Søɳʛ❗️\n🔊 Ʌʈ 💞 Ƥøsɩʈɩøɳ » `{}` 🌷 ...**".format(position),
+            caption="💥 𝐊𝐚𝐚𝐥🤞𝐌𝐮𝐬𝐢𝐜 💿 𝐐𝐮𝐞𝐮𝐞𝐝❗️\n🔊 𝐀𝐭 💞 𝐏𝐨𝐬𝐢𝐭𝐢𝐨𝐧 » `{}` 🌷 ...**".format(position),
             reply_markup=keyboard,
         )
     else:
@@ -349,35 +349,33 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="**💥 Ʌɗɩtyɑ🤞Mʋsɩƈ 🎸 Nøω 💞\n🔊 Ƥɭɑyɩɳʛ 😍 ØƤ 🥀 ...**".format(),
+            caption="**💥 𝐊𝐚𝐚𝐥🤞𝐌𝐮𝐬𝐢𝐜 🎸 𝐏𝐥𝐚𝐲𝐢𝐧𝐠 💞\n🔊 𝐂𝐮𝐫𝐫𝐞𝐧𝐭 😍 𝐒𝐨𝐧𝐠 🥀 ...**".format(),
            )
 
     os.remove("final.png")
     return await lel.delete()
     
     
-@Client.on_message(commandpro(["/pause", "pause"]) & other_filters)
+@Client.on_message(commandpro(["pause", "/pause", "!pause", ".pause", "pse"]) & other_filters)
 @errors
 @authorized_users_only
 async def pause(_, message: Message):
     await message.delete()
     await clientbot.pytgcalls.pause_stream(message.chat.id)
-    await message.reply_text("**▶️ Ƥɑʋsɘɗ 🌷 ...**"
-    )
+    await message.reply_text("**▶️ 𝐏𝐚𝐮𝐬𝐞𝐝 🌷 ...**")
 
 
-@Client.on_message(commandpro(["/resume", "resume"]) & other_filters)
+@Client.on_message(commandpro(["resume", "/resume", "!resume", ".resume", "rsm"]) & other_filters)
 @errors
 @authorized_users_only
 async def resume(_, message: Message):
     await message.delete()
     await clientbot.pytgcalls.resume_stream(message.chat.id)
-    await message.reply_text("**⏸ Ʀɘsʋɱɘɗ 🌷 ...**"
-    )
+    await message.reply_text("**⏸ 𝐑𝐞𝐬𝐮𝐦𝐞𝐝 🌷 ...**")
 
 
 
-@Client.on_message(commandpro(["/skip", "/next", "skip", "next"]) & other_filters)
+@Client.on_message(commandpro(["skip", "/skip", "!skip", ".skip", "skp"]) & other_filters)
 @errors
 @authorized_users_only
 async def skip(_, message: Message):
@@ -388,15 +386,15 @@ async def skip(_, message: Message):
     for x in clientbot.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
     if int(chat_id) not in ACTV_CALLS:
-        await message.reply_text("**💥 Ʌɗɩtyɑ 💞 Ɲøʈɦɩɳʛ 🔇\n🚫 Ƥɭɑyɩɳʛ 🌷 ...**")
+        await message.reply_text("**💥 𝐍𝐨𝐭𝐡𝐢𝐧𝐠 🔇 𝐏𝐥𝐚𝐲𝐢𝐧𝐠 🌷 ...**")
     else:
         queues.task_done(chat_id)
         
         if queues.is_empty(chat_id):
-            await message.reply_text("**🥀 Queue Empty, Leaving VC ✨ ...**") 
             await clientbot.pytgcalls.leave_group_call(chat_id)
+            await message.reply_text("**🥀 𝐄𝐦𝐩𝐭𝐲 𝐐𝐮𝐞𝐮𝐞, 𝐋𝐞𝐚𝐯𝐢𝐧𝐠 𝐕𝐂 ✨...**")
         else:
-            await message.reply_text("**⏩ Sƙɩƥƥɘɗ 🌷 ...**") 
+            await message.reply_text("**⏩ 𝐒𝐤𝐢𝐩𝐩𝐞𝐝 🌷 ...**")
             await clientbot.pytgcalls.change_stream(
                 chat_id, 
                 InputStream(
@@ -408,7 +406,7 @@ async def skip(_, message: Message):
 
 
 
-@Client.on_message(commandpro(["/end", "end", "/stop", "stop", "x"]) & other_filters)
+@Client.on_message(commandpro(["stop", "end", "/stop", "/end", "!stop", "!end", ".stop", ".end", "stp"]) & other_filters)
 @errors
 @authorized_users_only
 async def stop(_, message: Message):
@@ -419,20 +417,18 @@ async def stop(_, message: Message):
         pass
 
     await clientbot.pytgcalls.leave_group_call(message.chat.id)
-    await message.reply_text("**❌ Sʈøƥƥɘɗ 🌷 ...**"
-    )
+    await message.reply_text("**❌ 𝐒𝐭𝐨𝐩𝐩𝐞𝐝 🌷 ...**")
 
 
-@Client.on_message(commandpro(["reload", "refresh"]))
+@Client.on_message(commandpro(["reload", "/reload", "!reload", ".reload", "rld"]) & other_filters)
 @errors
 @authorized_users_only
-async def admincache(client, message: Message):
+async def update_admin(client, message):
     global a
     await message.delete()
     new_admins = []
     new_ads = await client.get_chat_members(message.chat.id, filter="administrators")
     for u in new_ads:
         new_admins.append(u.user.id)
-    admins[message.chat.id] = new_admins
-    await message.reply_text("**🔥 Ʀɘɭøɑɗɘɗ 🌷 ...**"
-    )
+    a[message.chat.id] = new_admins
+    await message.reply_text("**🔥 𝐑𝐞𝐥𝐨𝐚𝐝𝐞𝐝 🌷 ...**")
