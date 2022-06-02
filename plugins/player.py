@@ -7,6 +7,7 @@ import ffmpeg
 import random
 import requests
 from os import path
+from modules import bot
 from asyncio.queues import QueueEmpty
 from typing import Callable
 from pyrogram import Client, filters
@@ -24,6 +25,7 @@ from modules.cache.admins import admins as a
 from modules.helpers.filters import command, other_filters
 from modules.helpers.command import commandpro
 from modules.helpers.decorators import errors, authorized_users_only
+from modules.database.dbchat import (get_served_chats, is_served_chat, add_served_chat)
 from modules.helpers.errors import DurationLimitError
 from modules.helpers.gets import get_url, get_file_name
 from PIL import Image, ImageFont, ImageDraw
@@ -128,8 +130,14 @@ async def play(_, message: Message):
     global que
     global useer
     await message.delete()
+
     lel = await message.reply("**🔎 Sɘɑɤƈɦɩɳʛ ...**")
 
+    if not await is_served_chat(message.chat.id):
+        await lel.edit(f"❌ **This chat not authorized !**\n\nI can't stream music in non-authorized chat, ask to sudo user to auth this chat.\n\DM to the sudo user [From Here](https://t.me/adityahalder)", disable_web_page_preview=True)
+        return await bot.leave_chat(message.chat.id)  
+    if message.sender_chat:
+        return await lel.edit("You'll need to switch to a user account to play music.")  
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
