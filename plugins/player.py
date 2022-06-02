@@ -10,7 +10,7 @@ from os import path
 from modules import bot
 from asyncio.queues import QueueEmpty
 from typing import Callable
-from pyrogram import Client, filters,
+from pyrogram import Client, filters
 from pyrogram.types import Message, Voice, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 from modules.cache.admins import set
