@@ -10,15 +10,16 @@ from os import path
 from modules import bot
 from asyncio.queues import QueueEmpty
 from typing import Callable
-from pyrogram import Client, filters
+from pyrogram import Client, filters,
 from pyrogram.types import Message, Voice, InlineKeyboardButton, InlineKeyboardMarkup
-from pyrogram.errors import UserAlreadyParticipant
+from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 from modules.cache.admins import set
 from modules.clientbot import clientbot, queues
 from modules.clientbot.clientbot import client as USER
 from modules.helpers.admins import get_administrators
 from youtube_search import YoutubeSearch
-from modules import converter
+from modules import converter, me_user
+from plugins import LOGS
 from modules.downloaders import youtube
 from modules.config import DURATION_LIMIT, que, SUDO_USERS
 from modules.cache.admins import admins as a
@@ -126,7 +127,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     & ~filters.forwarded
     & ~filters.via_bot
 )
-async def play(_, message: Message):
+async def play(c: Client, message: Message):
     global que
     global useer
     await message.delete()
@@ -139,43 +140,51 @@ async def play(_, message: Message):
     if message.sender_chat:
         return await lel.edit("You'll need to switch to a user account to play music.")  
     administrators = await get_administrators(message.chat)
-    chid = message.chat.id
 
+    if message.sender_chat:
+        return await lel.edit(
+            "you're an __Anonymous__ user !\n\n» revert back to your real user account to use this bot."
+        )
     try:
-        user = await USER.get_me()
-    except:
-        user.first_name = "Aditya_Player"
-    usar = user
-    wew = usar.id
-    try:
-        await _.get_chat_member(chid, wew)
-    except:
-        for administrator in administrators:
-            if administrator == message.from_user.id:
-                try:
-                    invitelink = await _.export_chat_invite_link(chid)
-                except:
-                    await lel.edit(
-                        "**💥 Ʌʈ🤞Fɩrsʈ 🥀 Ɱɑƙɘ ♥️ Ɱɘ ⭐ Ʌɗɱɩŋ 😎 ...**")
-                    return
+        ubot = me_user.id
+        b = await c.get_chat_member(chat_id, ubot)
+        if b.status == "banned":
+            try:
+                await lel.edit("❌ The userbot is banned in this chat, unban the userbot first to be able to play music !")
+                #await remove_active_chat(chat_id)
+            except BaseException:
+                pass
+            invitelink = (await c.get_chat(chat_id)).invite_link
+            if not invitelink:
+                await c.export_chat_invite_link(chat_id)
+                invitelink = (await c.get_chat(chat_id)).invite_link
+            if invitelink.startswith("https://t.me/+"):
+                invitelink = invitelink.replace(
+                    "https://t.me/+", "https://t.me/joinchat/"
+                )
+            await USER.join_chat(invitelink)
+            #await remove_active_chat(chat_id)
+    except UserNotParticipant:
+        try:
+            invitelink = (await c.get_chat(chat_id)).invite_link
+            if not invitelink:
+                await c.export_chat_invite_link(chat_id)
+                invitelink = (await c.get_chat(chat_id)).invite_link
+            if invitelink.startswith("https://t.me/+"):
+                invitelink = invitelink.replace(
+                    "https://t.me/+", "https://t.me/joinchat/"
+                )
+            await USER.join_chat(invitelink)
+            #await remove_active_chat(chat_id)
+        except UserAlreadyParticipant:
+            pass
+        except Exception as e:
+            LOGS.info(e)
+            return await lel.edit(
+                f"❌ **userbot failed to join**\n\n**reason**: `{e}`"
+            )
 
-                try:
-                    await USER.join_chat(invitelink)
-                    await USER.send_message(
-                        message.chat.id, "** 😎 I🤞Ʌɱ 🥀 Ʀɘɑɗy ♥️ Ƭø ⭐ Ƥɭɑy 😎 ...**")
-
-                except UserAlreadyParticipant:
-                    pass
-                except Exception:
-                    await lel.edit(
-                        f"**🎸 Ƥɭɘɑsɘ ❤️ Ɱɑŋʋɑɭɭy 🥀 Ʌɗɗ 💫 Ʌssɩsʈɑŋʈ 😔 Øɤ 🎸 Ƈøŋʈɑƈʈ ❤️ ʈø ː [ƛɗɩtyɑ Ɦɑɭɗɘr](https://t.me/AdityaHalder) 🥀**")
-    try:
-        await USER.get_chat(chid)
-    except:
-        await lel.edit(
-            f"**🎸 Ƥɭɘɑsɘ ❤️ Ɱɑŋʋɑɭɭy 🥀 Ʌɗɗ 💫 Ʌssɩsʈɑŋʈ 😔 Øɤ 🎸 Ƈøŋʈɑƈʈ ❤️ ʈø ː [ƛɗɩtyɑ Ɦɑɭɗɘr](https://t.me/AdityaHalder) 🥀**")
-        return
-    
+    await lel.edit(f"**🔎 Sɘɑɤƈɦɩɳʛ ...**")
     audio = (
         (message.reply_to_message.audio or message.reply_to_message.voice)
         if message.reply_to_message
