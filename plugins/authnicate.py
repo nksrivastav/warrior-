@@ -43,7 +43,7 @@ async def unauth_chat_func(_, message: Message):
       await message.reply_text(f"error: `{e}`")
 
 
-@app.on_message(filters.commandpro("allowedchat"))
+@app.on_message(commandpro("allowedchat"))
 @errors
 @sudo_users_only
 async def blacklisted_chats_func(_, message: Message):
