@@ -56,7 +56,8 @@ async def broadcast_message_nopin(c: Client, message: Message):
 
 
 @Client.on_message(command(["broadcast_pin"]) & ~filters.edited)
-@bot_creator
+@errors
+@sudo_users_only
 async def broadcast_message_pin(c: Client, message: Message):
     if not message.reply_to_message:
         pass
