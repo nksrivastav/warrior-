@@ -12,5 +12,5 @@ bot = Bot(
 
 with Bot(":kaal:", API_ID, API_HASH, bot_token=BOT_TOKEN) as app:
     me_bot = app.get_me()
-with user as app:
+with client as app:
     me_user = app.get_me()
