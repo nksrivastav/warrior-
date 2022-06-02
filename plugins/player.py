@@ -184,7 +184,6 @@ async def play(c: Client, message: Message):
                 f"❌ **userbot failed to join**\n\n**reason**: `{e}`"
             )
 
-    await lel.edit(f"**🔎 Sɘɑɤƈɦɩɳʛ ...**")
     audio = (
         (message.reply_to_message.audio or message.reply_to_message.voice)
         if message.reply_to_message
