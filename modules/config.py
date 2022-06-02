@@ -7,11 +7,11 @@ load_dotenv()
 que = {}
 admins = {}
 
-API_ID = int(getenv("API_ID", "7639910"))
-API_HASH = getenv("API_HASH", "d07f2a4b3ddd7f3535653773f27b777d")
-BOT_TOKEN = getenv("BOT_TOKEN", "5119750402:AAGyvMmNz9vicQGqbalcGAvxszfnyv8eb6I")
+API_ID = int(getenv("API_ID", "4441263"))
+API_HASH = getenv("API_HASH", "83aa7fc275ea829e5e77f13992e48fcb")
+BOT_TOKEN = getenv("BOT_TOKEN", "5046865093:AAG-RdOo-vB3qh3xJsWvi1heohzWkqFLpbU")
 DURATION_LIMIT = int(getenv("DURATION_LIMIT", "300"))
-STRING_SESSION = getenv("STRING_SESSION", "BQCdBUVBRE1EgR2GCB89z77xjSVYlAPDmzlti7dS5LDuEY6Tbat_hNJthMqCmuXvtGB1ZGx-c199aeoO3vF7j3rY7bxWa8g6J3QI4BKCzT99ySCh1QtbYJKmrVJVs4Cofk_GD5jPSn8rdwFs27qgZzzEFksKSotsZWcTTAvRMNbEE-MWTWXZ0NWscgUf8SnWfq5C9sv-kpKLrHR2N7AjJzOWQJ_R1JogFgzjk2JJ6WthGnywDSd1PoPkuJk1u_KmnRId0nXKqj_60pgMQu2cyGrpNJQiYIkOA8irzkCcfLT-AMfDX7n9SYJvvXH0CBfOeK2sxknzy9XWIvx-c8Nw9lVFdbvTKAA")
+STRING_SESSION = getenv("STRING_SESSION", "BQDAVomRsF98XLUfvYXHCYS6H8UDXXws-euVh9X8veE7d0rewXxbCzIMcY8bWjqGyhWxHMokJ7td1P5T2vaB051PyxxEFhgLvvzNcnKbxgStlkPYsaN8xEFS3yV5HcKp2u4vtC0Hx2cnKG_7D7-pT4nk2R8ch2EsKdbtRO4kzPZz01tDBZLihzjDSuttl7S7q1_MjdVD1niN3SvRBM3w4gGd8vtuOWltoFoR4jyjA5jH5QMAtJS4KODmJIGfVjakWCQ_cx4b5CWeYFwrIYiKkNvpLxjDMMnVoeho9XuKXj-0eY3Zu2mcQabXfwb6KhbnrRQfyz3whYV60vGyIdjKJYSScTctTAA")
 COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ ! .").split())
-SUDO_USERS = list(map(int, getenv("SUDO_USERS", "5241878797").split()))
+SUDO_USERS = list(map(int, getenv("SUDO_USERS", "5356564375").split()))
 aiohttpsession = aiohttp.ClientSession()
