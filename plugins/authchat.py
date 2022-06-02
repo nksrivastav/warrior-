@@ -11,6 +11,7 @@ from modules.database.dbchat import (get_served_chats, is_served_chat, add_serve
 @errors
 @sudo_users_only
 async def auth_chat_func(_, message: Message):
+    await message.delete()
     if len(message.command) != 2:
         return await message.reply_text("**🥀 𝐆𝐢𝐯𝐞 𝐂𝐡𝐚𝐭 𝐈𝐃 𝐅𝐨𝐫 𝐀𝐥𝐥𝐨𝐰 ✨ ...**")
     chat_id = int(message.text.strip().split()[1])
@@ -25,6 +26,7 @@ async def auth_chat_func(_, message: Message):
 @errors
 @sudo_users_only
 async def unauth_chat_func(_, message: Message):
+    await message.delete()
     if len(message.command) != 2:
         return await message.reply_text(
             "**🥀 𝐆𝐢𝐯𝐞 𝐂𝐡𝐚𝐭 𝐈𝐃 𝐅𝐨𝐫 𝐃𝐢𝐬𝐀𝐥𝐥𝐨𝐰 ✨ ...**"
@@ -45,6 +47,7 @@ async def unauth_chat_func(_, message: Message):
 @errors
 @sudo_users_only
 async def blacklisted_chats_func(_, message: Message):
+    await message.delete()
     served_chats = []
     text = "📡 **𝐀𝐥𝐥𝐨𝐰𝐞𝐝 𝐂𝐡𝐚𝐭𝐬:**\n\n"
     try:
