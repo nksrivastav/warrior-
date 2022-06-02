@@ -131,7 +131,7 @@ async def play(_, message: Message):
     global useer
     await message.delete()
 
-    lel = await message.reply("**🔎 Sɘɑɤƈɦɩɳʛ ...**")
+    lel = await message.reply("**🔎 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 ...**")
 
     if not await is_served_chat(message.chat.id):
         await lel.edit(f"**🥀 𝐒𝐨𝐫𝐫𝐲 𝐓𝐡𝐢𝐬 🌺 𝐌𝐮𝐬𝐢𝐜 𝐑𝐨𝐛𝐨𝐭\n𝐎𝐧𝐥𝐲 𝐅𝐨𝐫 𝐏𝐫𝐞𝐦𝐢𝐮𝐦 𝐔𝐬𝐞𝐫𝐬 ✨...\n\n💐 𝐈𝐟 𝐘𝐨𝐮 ❥︎𝐖𝐚𝐧𝐭 🌸 𝐭𝐨 𝐀𝐝𝐝 𝐢𝐧\n𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩 𝐓𝐡𝐞𝐧 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 🌷\n❥︎ 𝐓𝐨 ➪ [𓆩❛-𝐌𝐫᭄'𝐊𝐚𝐚𝐋-𝐱𝐃 °𓆪](https://t.me/mrkaalxd) ...**", disable_web_page_preview=True)
