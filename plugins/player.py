@@ -1,5 +1,5 @@
 # Aditya Halder // @AdityaHalder
-# 𝐊𝐚𝐚𝐥𝐌𝐮𝐬𝐢𝐜 // @𝐌𝐫𝐊𝐚𝐚𝐥𝐱𝐃
+# Toxic𝐌𝐮𝐬𝐢𝐜 // @wtf_realtoxic
 import os
 import aiofiles
 import aiohttp
@@ -110,7 +110,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     draw.text((190, 630), f"Views: {views}", (255, 255, 255), font=font)
     draw.text(
         (190, 670),
-        f"Powered By: Aditya Halder (@AdityaHalder)",
+        f"Powered By: Toxic (@wtf_realtoxic)",
         (255, 255, 255),
         font=font,
     )
@@ -134,7 +134,7 @@ async def play(_, message: Message):
     lel = await message.reply("**🔎 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 ...**")
 
     if not await is_served_chat(message.chat.id):
-        await lel.edit(f"**🥀 𝐒𝐨𝐫𝐫𝐲 𝐓𝐡𝐢𝐬 🌺 𝐌𝐮𝐬𝐢𝐜 𝐑𝐨𝐛𝐨𝐭\n𝐎𝐧𝐥𝐲 𝐅𝐨𝐫 𝐏𝐫𝐞𝐦𝐢𝐮𝐦 𝐔𝐬𝐞𝐫𝐬 ✨...\n\n💐 𝐈𝐟 𝐘𝐨𝐮 ❥︎𝐖𝐚𝐧𝐭 🌸 𝐭𝐨 𝐀𝐝𝐝 𝐢𝐧\n𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩 𝐓𝐡𝐞𝐧 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 🌷\n❥︎ 𝐓𝐨 ➪ [𓆩❛-𝐌𝐫᭄'𝐊𝐚𝐚𝐋-𝐱𝐃 °𓆪](https://t.me/mrkaalxd) ...**", disable_web_page_preview=True)
+        await lel.edit(f"**🥀 𝐒𝐨𝐫𝐫𝐲 𝐓𝐡𝐢𝐬 🌺 𝐌𝐮𝐬𝐢𝐜 𝐑𝐨𝐛𝐨𝐭\n𝐎𝐧𝐥𝐲 𝐅𝐨𝐫 𝐏𝐫𝐞𝐦𝐢𝐮𝐦 𝐔𝐬𝐞𝐫𝐬 ✨...\n\n💐 𝐈𝐟 𝐘𝐨𝐮 ❥︎𝐖𝐚𝐧𝐭 🌸 𝐭𝐨 𝐀𝐝𝐝 𝐢𝐧\n𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩 𝐓𝐡𝐞𝐧 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 🌷\n❥︎ 𝐓𝐨 ➪ [Toxic](https://t.me/wtf_realtoxic) ...**", disable_web_page_preview=True)
         return await bot.leave_chat(message.chat.id)  
     if message.sender_chat:
         return await lel.edit("**🥀 𝐏𝐥𝐞𝐚𝐬𝐞 𝐃𝐨𝐧'𝐭 𝐔𝐬𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐅𝐨𝐫 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 ✨ ...**")  
@@ -168,12 +168,12 @@ async def play(_, message: Message):
                     pass
                 except Exception:
                     await lel.edit(
-                        f"**🎸 𝐏𝐥𝐞𝐚𝐬𝐞 ❤️ 𝐌𝐚𝐧𝐮𝐚𝐥𝐥𝐲 🥀 𝐀𝐝𝐝 💫 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 😔 𝐎𝐫 🎸 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 ❤️ 𝐓𝐨 ː [𓆩❛-𝐌𝐫᭄'𝐊𝐚𝐚𝐋-𝐱𝐃 °𓆪](https://t.me/mrkaalxd) ✨ ...**")
+                        f"**🎸 𝐏𝐥𝐞𝐚𝐬𝐞 ❤️ 𝐌𝐚𝐧𝐮𝐚𝐥𝐥𝐲 🥀 𝐀𝐝𝐝 💫 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 😔 𝐎𝐫 🎸 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 ❤️ 𝐓𝐨 ː [Toxic](https://t.me/wtf_realtoxic) ✨ ...**")
     try:
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"**🎸 𝐏𝐥𝐞𝐚𝐬𝐞 ❤️ 𝐌𝐚𝐧𝐮𝐚𝐥𝐥𝐲 🥀 𝐀𝐝𝐝 💫 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 😔 𝐎𝐫 🎸 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 ❤️ 𝐓𝐨 ː [𓆩❛-𝐌𝐫᭄'𝐊𝐚𝐚𝐋-𝐱𝐃 °𓆪](https://t.me/mrkaalxd) ✨ ...**")
+            f"**🎸 𝐏𝐥𝐞𝐚𝐬𝐞 ❤️ 𝐌𝐚𝐧𝐮𝐚𝐥𝐥𝐲 🥀 𝐀𝐝𝐝 💫 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 😔 𝐎𝐫 🎸 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 ❤️ 𝐓𝐨 ː [Toxic](https://t.me/wtf_realtoxic) ✨ ...**")
         return
     
     audio = (
