@@ -144,7 +144,7 @@ async def play(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "⏤͟͟͞❥͜͡𝄟⃟𝐊𝐚𝐚𝐥🕊️⃝‌ٖٖٖٖ ‌ٖٖٖٖٖ🦋𝐌𝐮𝐬𝐢𝐜𝄟⃟🎸"
+        user.first_name = "⏤͟͟͞❥͜͡𝄟⃟𝗧𝗼𝘅𝗶𝗰🕊️⃝‌ٖٖٖٖ ‌ٖٖٖٖٖ🦋𝐌𝐮𝐬𝐢𝐜𝄟⃟🎸"
     usar = user
     wew = usar.id
     try:
@@ -156,24 +156,24 @@ async def play(_, message: Message):
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "**💥 𝐀𝐭🤞𝐅𝐢𝐫𝐬𝐭 🥀 𝐌𝐚𝐤𝐞 ♥️ 𝐌𝐞 ⭐ 𝐀𝐝𝐦𝐢𝐧 😎 ...**")
+                        "**𝗣𝗲𝗵𝗹𝗲 𝗮𝗱𝗺𝗶𝗻 𝘁𝗼𝗵 𝗯𝗮𝗻𝗮𝗼...**")
                     return
 
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "** 😎 𝐈🤞𝐚𝐦 🥀 𝐑𝐞𝐚𝐝𝐲 ♥️ 𝐓𝐨 ⭐ 𝐏𝐥𝐚𝐲 😎 ...**")
+                        message.chat.id, "** 𝗦𝗼𝗻𝗴 𝗯𝗮𝗷𝗮𝗻𝗲 𝗸𝗲 𝗹𝗶𝘆𝗲 𝗿𝗲𝗮𝗱𝘆 𝗵𝘂 ...**")
 
                 except UserAlreadyParticipant:
                     pass
                 except Exception:
                     await lel.edit(
-                        f"**🎸 𝐏𝐥𝐞𝐚𝐬𝐞 ❤️ 𝐌𝐚𝐧𝐮𝐚𝐥𝐥𝐲 🥀 𝐀𝐝𝐝 💫 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 😔 𝐎𝐫 🎸 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 ❤️ 𝐓𝐨 ː [Toxic](https://t.me/wtf_realtoxic) ✨ ...**")
+                        f"** 𝗔𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁 𝗸𝗼 𝗺𝗮𝗻𝘂𝗮𝗹𝗹𝘆 𝗮𝗱𝗱 𝗸𝗮𝗿𝗼 𝘆𝗮 𝗼𝗻𝘄𝗲𝗿 𝘀𝗲 𝗰𝗼𝗻𝘁𝗮𝗰𝘁 𝗸𝗮𝗿𝗼ː [Toxic](https://t.me/wtf_realtoxic) ✨ ...**")
     try:
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"**🎸 𝐏𝐥𝐞𝐚𝐬𝐞 ❤️ 𝐌𝐚𝐧𝐮𝐚𝐥𝐥𝐲 🥀 𝐀𝐝𝐝 💫 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 😔 𝐎𝐫 🎸 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 ❤️ 𝐓𝐨 ː [Toxic](https://t.me/wtf_realtoxic) ✨ ...**")
+            f"** 𝗔𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁 𝗸𝗼 𝗺𝗮𝗻𝘂𝗮𝗹𝗹𝘆 𝗮𝗱𝗱 𝗸𝗮𝗿𝗼 𝘆𝗮 𝗼𝗻𝘄𝗲𝗿 𝘀𝗲 𝗰𝗼𝗻𝘁𝗮𝗰𝘁 𝗸𝗮𝗿𝗼ː [Toxic](https://t.me/wtf_realtoxic) ✨ ...**")
         return
     
     audio = (
@@ -191,7 +191,7 @@ async def play(_, message: Message):
 
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://te.legra.ph/file/ed6920a2f0ab5af3fd55d.png"
+        thumb_name = "https://telegra.ph/file/95d0ad6ac9784ab56df7b.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
