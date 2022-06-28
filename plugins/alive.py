@@ -35,22 +35,21 @@ async def start_(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/95d0ad6ac9784ab56df7b.jpg",
         caption=f"""**━━━━━━━━━━━━━━━━━━━━━━━━
-💥 ʜᴇʟʟᴏ, ɪ ᴀᴍ sᴜᴘᴇʀ ғᴀsᴛ ᴠᴄ ᴘʟᴀʏᴇʀ
-ʙᴏᴛ ғᴏʀ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘs ...
+😇𝗧𝗛𝗜𝗦 𝗜𝗦 𝗧𝗛𝗘 𝗕𝗘𝗦𝗧 𝗠𝗨𝗦𝗜𝗖 𝗕𝗢𝗧 𝗠𝗔𝗗𝗘 𝗕𝗬 𝗧𝗢𝗫𝗜𝗖 𝗗𝗔𝗡𝗚𝗘𝗥𝗢𝗨𝗦𝗙𝗜𝗚𝗛𝗧𝗘𝗥
 ┏━━━━━━━━━━━━━━━━━┓
-┣★ ᴄʀᴇᴀᴛᴏʀ : [ᴀᴅɪᴛʏᴀ ʜᴀʟᴅᴇʀ](https://t.me/wtf_realtoxic)
-┣★ ᴜᴘᴅᴀᴛᴇs : [ᴀᴅɪᴛʏᴀ sᴇʀᴠᴇʀ](https://t.me/Dangerousfighterchannel)
-┣★ sᴜᴘᴘᴏʀᴛ : [ᴀᴅɪᴛʏᴀ ᴅɪsᴄᴜs](https://t.me/Dangerouschatting)
+┣★ 𝐎𝐰𝐧𝐞𝐫: [𝐓𝐨𝐱𝐢𝐜](https://t.me/wtf_realtoxic)
+┣★ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥:[𝐔𝐩𝐝𝐚𝐭𝐞𝐬](https://t.me/Dangerousfighterchannel)
+┣★ 𝐆𝐫𝐨𝐮𝐩: [𝐂𝐡𝐚𝐭𝐭𝐢𝐧𝐠](https://t.me/Dangerouschatting)
 ┗━━━━━━━━━━━━━━━━━┛
 
-💞 ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ǫᴜᴇsᴛɪᴏɴs ᴛʜᴇɴ
-ᴅᴍ ᴛᴏ ᴍʏ [ʟᴇɢᴇɴᴅ ᴏᴡɴᴇʀ](https://t.me/adityahalder) ...
+𝗜𝗳 𝘆𝗼𝘂 𝗵𝗮𝘃𝗲 𝗮𝗻𝘆 𝗱𝗼𝘂𝗯𝘁 𝗸𝗲𝗲𝗽 𝗰𝗼𝗺𝘁𝗮𝗰𝘁 𝘁𝗼 𝗼𝘄𝗻𝗲𝗿 
+       𝗧𝗼𝘅𝗶𝗰 :-(https://t.me/wtf_realtoxic)😇😍...
 ━━━━━━━━━━━━━━━━━━━━━━━━**""",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "➕ ❰ ᴊᴏɪɴ ʜᴇʀᴇ ғᴏʀ ᴜᴘᴅᴀᴛᴇs ❱ ➕", url=f"https://t.me/adityaserver")
+                        "➕ ❰ ᴊᴏɪɴ ʜᴇʀᴇ ғᴏʀ ᴜᴘᴅᴀᴛᴇs ❱ ➕", url=f"https://t.me/Dangerousfighterchannel")
                 ]
                 
            ]
@@ -67,7 +66,7 @@ async def start(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "💥 ᴊᴏɪɴ ʜᴇʀᴇ ᴀɴᴅ sᴜᴘᴘᴏʀᴛ 💞", url=f"https://t.me/adityadiscus")
+                        "💥 ᴊᴏɪɴ ʜᴇʀᴇ ᴀɴᴅ sᴜᴘᴘᴏʀᴛ 💞", url=f"https://t.me/Dangerouschatting")
                 ]
             ]
         ),
@@ -77,13 +76,13 @@ async def start(client: Client, message: Message):
 @Client.on_message(commandpro(["repo", "#repo", "@repo", "/repo", "source"]) & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/c6e1041c6c9a12913f57a.png",
+        photo=f"https://telegra.ph/file/95d0ad6ac9784ab56df7b.jpg",
         caption=f"""""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "💥 ᴄʟɪᴄᴋ ᴍᴇ ᴛᴏ ɢᴇᴛ ʀᴇᴘᴏ 💞", url=f"https://github.com/adityahalderxd/adityaplayer")
+                        "💥 ᴄʟɪᴄᴋ ᴍᴇ ᴛᴏ ɢᴇᴛ ʀᴇᴘᴏ 💞", url=f"https://t.me/wtf_realtoxic")
                 ]
             ]
         ),
