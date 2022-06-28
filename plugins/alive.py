@@ -49,7 +49,7 @@ async def start_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ ❰ ᴊᴏɪɴ ʜᴇʀᴇ ғᴏʀ ᴜᴘᴅᴀᴛᴇs ❱ ➕", url=f"https://t.me/Dangerousfighterchannel")
+                        "𝗗𝗮𝗻𝗴𝗲𝗿𝗼𝘂𝘀𝗰𝗵𝗮𝗻𝗻𝗲𝗹", url=f"https://t.me/Dangerousfighterchannel")
                 ]
                 
            ]
@@ -66,7 +66,7 @@ async def start(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "💥 ᴊᴏɪɴ ʜᴇʀᴇ ᴀɴᴅ sᴜᴘᴘᴏʀᴛ 💞", url=f"https://t.me/Dangerouschatting")
+                        "𝗗𝗮𝗻𝗴𝗲𝗿𝗼𝘂𝘀𝗰𝗵𝗮𝘁𝘁𝗶𝗻𝗴", url=f"https://t.me/Dangerouschatting")
                 ]
             ]
         ),
