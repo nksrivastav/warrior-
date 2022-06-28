@@ -16,14 +16,3 @@
 [![Deploy+On+Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/toxictelegram1/ADITYA)
 
 
-
-### Get String Session
-
-[![GenerateString](https://img.shields.io/badge/repl.it-generateString-yellowgreen)](https://replit.com/@AdityaHalder/StringSession)
-
-
-
-#### Copy Pasters You Can Copy This But Must Give Credits ...
-
-### Owner Of This Repository
-[Toxic Halder](https://t.me/Dangerousfighterchannel)](https://t.me/wtf_realtoxic)
