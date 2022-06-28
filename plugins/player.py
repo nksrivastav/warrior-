@@ -201,7 +201,7 @@ async def play(_, message: Message):
                 [
                         InlineKeyboardButton(
                             text="💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐭 𝐆𝐫𝐨𝐮𝐩 💞",
-                            url=f"https://t.me/sanki_world")
+                            url=f"https://t.me/Dangerouschatting")
 
                 ]
             ]
@@ -240,7 +240,7 @@ async def play(_, message: Message):
                 [
                         InlineKeyboardButton(
                             text="💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐭 𝐆𝐫𝐨𝐮𝐩 💞",
-                            url=f"https://t.me/sanki_world")
+                            url=f"https://t.me/Dangerouschatting")
 
                 ]
             ]
@@ -256,7 +256,7 @@ async def play(_, message: Message):
                 [
                         InlineKeyboardButton(
                             text="💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐭 𝐆𝐫𝐨𝐮𝐩 💞",
-                            url=f"https://t.me/sanki_world")
+                            url=f"https://t.me/Dangerouschatting")
 
                 ]
             ]
@@ -310,7 +310,7 @@ async def play(_, message: Message):
                 [
                         InlineKeyboardButton(
                             text="💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐭 𝐆𝐫𝐨𝐮𝐩 💞",
-                            url=f"https://t.me/sanki_world")
+                            url=f"https://t.me/Dangerouschatting")
 
                 ]
             ]
