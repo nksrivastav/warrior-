@@ -1,9 +1,9 @@
 {
-    "name": "AdityaPlayer",
-    "logo": "https://te.legra.ph/file/2e2ddeb33674ba956148f.jpg",
+    "name": "ToxicPlayer",
+    "logo": "https://telegra.ph/file/95d0ad6ac9784ab56df7b.jpg",
     "description": "An Advanced Premium Music Bot For Telegram Groups VC.",
     "keywords": ["music", "voice chat", "telegram"],
-    "repository": "https://github.com/adityahalderxd/adityaplayer",
+    "repository": "https://github.com/toxictelegram1/ADITYA",
     "stack": "container",
     "env": {
         "API_ID": {
