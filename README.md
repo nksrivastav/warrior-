@@ -8,12 +8,12 @@
 
 ### Deploy To Railway
 
-[![Deploy+on+Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/AdityaHalderXD/AdityaPlayer&envs=API_ID,API_HASH,BOT_TOKEN,DURATION_LIMIT,STRING_SESSION,SUDO_USERS)
+[![Deploy+on+Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/toxictelegram1/ADITYA&envs=API_ID,API_HASH,BOT_TOKEN,DURATION_LIMIT,STRING_SESSION,SUDO_USERS)
 
 
 ### Deploy To Heroku
 
-[![Deploy+On+Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AdityaHalderXD/AdityaPlayer)
+[![Deploy+On+Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/toxictelegram1/ADITYA)
 
 
 
