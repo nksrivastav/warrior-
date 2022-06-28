@@ -33,7 +33,7 @@ async def _human_time_duration(seconds):
 @Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/95d0ad6ac9784ab56df7b.jpg",
+        photo=f"https://telegra.ph/file/efa287d73d9d5dd3b1347.jpg",
         caption=f"""**━━━━━━━━━━━━━━━━━━━━━━━━
 😇𝗧𝗛𝗜𝗦 𝗜𝗦 𝗧𝗛𝗘 𝗕𝗘𝗦𝗧 𝗠𝗨𝗦𝗜𝗖 𝗕𝗢𝗧 𝗠𝗔𝗗𝗘 𝗕𝗬 𝗧𝗢𝗫𝗜𝗖 𝗗𝗔𝗡𝗚𝗘𝗥𝗢𝗨𝗦𝗙𝗜𝗚𝗛𝗧𝗘𝗥
 ┏━━━━━━━━━━━━━━━━━┓
@@ -60,7 +60,7 @@ async def start_(client: Client, message: Message):
 @Client.on_message(commandpro(["/start", "/alive", "#Toxic"]) & filters.group & ~filters.edited)
 async def start(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/c6e1041c6c9a12913f57a.png",
+        photo=f"https://telegra.ph/file/efa287d73d9d5dd3b1347.jpg",
         caption=f"""""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -76,7 +76,7 @@ async def start(client: Client, message: Message):
 @Client.on_message(commandpro(["repo", "#repo", "@repo", "/repo", "source"]) & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/95d0ad6ac9784ab56df7b.jpg",
+        photo=f"https://telegra.ph/file/efa287d73d9d5dd3b1347.jpg",
         caption=f"""""",
         reply_markup=InlineKeyboardMarkup(
             [
