@@ -82,7 +82,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "💥 ᴄʟɪᴄᴋ ᴍᴇ ᴛᴏ ɢᴇᴛ ʀᴇᴘᴏ 💞", url=f"https://t.me/wtf_realtoxic")
+                        "𝗥𝗲𝗽𝗼 𝗼𝘄𝗻𝗲𝗿", url=f"https://t.me/wtf_realtoxic")
                 ]
             ]
         ),
