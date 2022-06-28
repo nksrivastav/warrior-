@@ -200,7 +200,7 @@ async def play(_, message: Message):
             [
                 [
                         InlineKeyboardButton(
-                            text="💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐭 𝐆𝐫𝐨𝐮𝐩 💞",
+                            text="𝗚𝗿𝗼𝘂𝗽",
                             url=f"https://t.me/Dangerouschatting")
 
                 ]
@@ -239,7 +239,7 @@ async def play(_, message: Message):
             [
                 [
                         InlineKeyboardButton(
-                            text="💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐭 𝐆𝐫𝐨𝐮𝐩 💞",
+                            text="𝗚𝗿𝗼𝘂𝗽",
                             url=f"https://t.me/Dangerouschatting")
 
                 ]
@@ -255,7 +255,7 @@ async def play(_, message: Message):
             [
                 [
                         InlineKeyboardButton(
-                            text="💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐭 𝐆𝐫𝐨𝐮𝐩 💞",
+                            text="𝗚𝗿𝗼𝘂𝗽",
                             url=f"https://t.me/Dangerouschatting")
 
                 ]
@@ -309,7 +309,7 @@ async def play(_, message: Message):
             [
                 [
                         InlineKeyboardButton(
-                            text="💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐭 𝐆𝐫𝐨𝐮𝐩 💞",
+                            text="𝗚𝗿𝗼𝘂𝗽",
                             url=f"https://t.me/Dangerouschatting")
 
                 ]
@@ -332,7 +332,7 @@ async def play(_, message: Message):
         position = await queues.put(chat_id, file=file_path)
         await message.reply_photo(
             photo="final.png",
-            caption="💥 𝐊𝐚𝐚𝐥🤞𝐌𝐮𝐬𝐢𝐜 💿 𝐐𝐮𝐞𝐮𝐞𝐝❗️\n🔊 𝐀𝐭 💞 𝐏𝐨𝐬𝐢𝐭𝐢𝐨𝐧 » `{}` 🌷 ...**".format(position),
+            caption="💥 𝗧𝗼𝘅𝗶𝗰🤞𝐌𝐮𝐬𝐢𝐜 💿 𝐐𝐮𝐞𝐮𝐞𝐝❗️\n🔊 𝐀𝐭 💞 𝐏𝐨𝐬𝐢𝐭𝐢𝐨𝐧 » `{}` 🌷 ...**".format(position),
             reply_markup=keyboard,
         )
     else:
@@ -349,7 +349,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="**💥 𝐊𝐚𝐚𝐥🤞𝐌𝐮𝐬𝐢𝐜 🎸 𝐏𝐥𝐚𝐲𝐢𝐧𝐠 💞\n🔊 𝐂𝐮𝐫𝐫𝐞𝐧𝐭 😍 𝐒𝐨𝐧𝐠 🥀 ...**".format(),
+            caption="**💥 𝗧𝗼𝘅𝗶𝗰🤞𝐌𝐮𝐬𝐢𝐜 🎸 𝐏𝐥𝐚𝐲𝐢𝐧𝐠 💞\n🔊 𝐂𝐮𝐫𝐫𝐞𝐧𝐭 😍 𝐒𝐨𝐧𝐠 🥀 ...**".format(),
            )
 
     os.remove("final.png")
@@ -362,7 +362,7 @@ async def play(_, message: Message):
 async def pause(_, message: Message):
     await message.delete()
     await clientbot.pytgcalls.pause_stream(message.chat.id)
-    await message.reply_text("**▶️ 𝐏𝐚𝐮𝐬𝐞𝐝 🌷 ...**")
+    await message.reply_text("**𝐏𝐚𝐮𝐬𝐞𝐝 🌷 ...**")
 
 
 @Client.on_message(commandpro(["resume", "/resume", "!resume", ".resume", "rsm"]) & other_filters)
@@ -371,7 +371,7 @@ async def pause(_, message: Message):
 async def resume(_, message: Message):
     await message.delete()
     await clientbot.pytgcalls.resume_stream(message.chat.id)
-    await message.reply_text("**⏸ 𝐑𝐞𝐬𝐮𝐦𝐞𝐝 🌷 ...**")
+    await message.reply_text("**𝐑𝐞𝐬𝐮𝐦𝐞𝐝 🌷 ...**")
 
 
 
@@ -386,7 +386,7 @@ async def skip(_, message: Message):
     for x in clientbot.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
     if int(chat_id) not in ACTV_CALLS:
-        await message.reply_text("**💥 𝐍𝐨𝐭𝐡𝐢𝐧𝐠 🔇 𝐏𝐥𝐚𝐲𝐢𝐧𝐠 🌷 ...**")
+        await message.reply_text("**𝐍𝐨𝐭𝐡𝐢𝐧𝐠 𝐏𝐥𝐚𝐲𝐢𝐧𝐠 🌷 ...**")
     else:
         queues.task_done(chat_id)
         
@@ -394,7 +394,7 @@ async def skip(_, message: Message):
             await clientbot.pytgcalls.leave_group_call(chat_id)
             await message.reply_text("**🥀 𝐄𝐦𝐩𝐭𝐲 𝐐𝐮𝐞𝐮𝐞, 𝐋𝐞𝐚𝐯𝐢𝐧𝐠 𝐕𝐂 ✨...**")
         else:
-            await message.reply_text("**⏩ 𝐒𝐤𝐢𝐩𝐩𝐞𝐝 🌷 ...**")
+            await message.reply_text("**𝐒𝐤𝐢𝐩𝐩𝐞𝐝 🌷 ...**")
             await clientbot.pytgcalls.change_stream(
                 chat_id, 
                 InputStream(
@@ -417,7 +417,7 @@ async def stop(_, message: Message):
         pass
 
     await clientbot.pytgcalls.leave_group_call(message.chat.id)
-    await message.reply_text("**❌ 𝐒𝐭𝐨𝐩𝐩𝐞𝐝 🌷 ...**")
+    await message.reply_text("**𝐒𝐭𝐨𝐩𝐩𝐞𝐝 🌷 ...**")
 
 
 @Client.on_message(commandpro(["reload", "/reload", "!reload", ".reload", "rld"]) & other_filters)
@@ -431,4 +431,4 @@ async def update_admin(client, message):
     for u in new_ads:
         new_admins.append(u.user.id)
     a[message.chat.id] = new_admins
-    await message.reply_text("**🔥 𝐑𝐞𝐥𝐨𝐚𝐝𝐞𝐝 🌷 ...**")
+    await message.reply_text("**𝐑𝐞𝐥𝐨𝐚𝐝𝐞𝐝 🌷 ...**")
