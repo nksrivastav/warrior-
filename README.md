@@ -16,3 +16,8 @@
 [![Deploy+On+Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/warrior_rder/RiDER)
 
 
+## [Group] https://t.me/warrior_riders
+
+
+
+## [Owner] {@masoom_banda}
